@@ -9,7 +9,8 @@
                             <x-layouts.sidebar-link href="{{ route('dashboard') }}" icon='fas-house'
                                 :active="request()->routeIs('dashboard*')">Dashboard</x-layouts.sidebar-link>
 
-                            <!-- Example three level -->
+                            <x-layouts.sidebar-link href="{{ route('orders.index') }}" icon='fas-house'
+                                :active="request()->routeIs('orders*')">Ordenes</x-layouts.sidebar-link>
                         </ul>
                     </nav>
                 </div>
