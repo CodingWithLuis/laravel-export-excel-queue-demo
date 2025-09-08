@@ -5,7 +5,10 @@
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-        <x-button type="primary" class="w-full">Expotar Ordenes</x-button>
+        <form action="{{ route('orders.export') }}" method="POST">
+            @csrf
+            <x-button type="primary" class="w-full">Exportar Ordenes</x-button>
+        </form>
     </div>
 
 </x-layouts.app>

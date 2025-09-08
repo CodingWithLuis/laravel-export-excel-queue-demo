@@ -19,8 +19,8 @@ class DatabaseSeeder extends Seeder
         $ordersData = [];
         $orderProductsData = [];
 
-        $batchSize = 1000;
-        $totalOrders = 1_000_000;
+        $batchSize = 50;
+        $totalOrders = 1000;
 
         for ($i = 1; $i <= $totalOrders; $i++) {
             $orderDate = fake()->dateTimeBetween('2024-01-01', '2024-12-31');

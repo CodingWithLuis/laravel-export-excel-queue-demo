@@ -20,6 +20,8 @@ Route::middleware(['auth'])->group(function () {
     Route::put('settings/password', [Settings\PasswordController::class, 'update'])->name('settings.password.update');
     Route::get('settings/appearance', [Settings\AppearanceController::class, 'edit'])->name('settings.appearance.edit');
 
+    Route::post('orders/export', [OrderController::class, 'export'])->name('orders.export');
+    Route::get('orders/download/{filename}', [OrderController::class, 'download'])->name('orders.download');
     Route::resource('orders', OrderController::class)->only('index');
 });
 
